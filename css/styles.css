@@ -9,7 +9,7 @@
 body {
   font-family: "Roboto", sans-serif;
   position: relative;
-  overflow-x: hidden;
+  
 }
 
 h1 {
@@ -87,7 +87,7 @@ ul li {
   opacity: 0;
   display: none;
   transition: opacity 2s ease-in;
-  height: inherit;
+  overflow-x: hidden;
 }
 
 /* Home section */
