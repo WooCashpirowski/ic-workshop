@@ -9,7 +9,8 @@
 body {
   font-family: "Roboto", sans-serif;
   position: relative;
-  
+  background: #31479e;
+  /* overflow-x: hidden; */
 }
 
 h1 {
@@ -73,6 +74,7 @@ ul li {
 #back-to-top.show {
   opacity: 0.8;
 }
+
 ::-webkit-scrollbar {
   width: 2px;
   background: #7a7aae;
@@ -83,14 +85,14 @@ ul li {
   border-radius: 10px;
 }
 
+/* Home section */
+
 .main {
   opacity: 0;
   display: none;
-  transition: opacity 2s ease-in;
+  transition: opacity 1s ease-in;
   overflow-x: hidden;
 }
-
-/* Home section */
 
 .home {
   height: 100vh;
@@ -454,7 +456,6 @@ p.bold {
   bottom: 0;
   left: 0;
   z-index: -1;
-  transition: opacity 0.3s ease-in;
 }
 
 .map-responsive {
