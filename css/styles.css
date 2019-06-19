@@ -73,9 +73,15 @@ ul li {
 #back-to-top.show {
   opacity: 0.8;
 }
-/* #content {
-  height: 2000px;
-} */
+::-webkit-scrollbar {
+  width: 2px;
+  background: #7a7aae;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cda715;
+  border-radius: 10px;
+}
 
 .main {
   opacity: 0;
