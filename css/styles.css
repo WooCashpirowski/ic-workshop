@@ -1,0 +1,527 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #efedff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 4.5rem;
+  text-align: center;
+  max-width: 950px;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 1.5em;
+}
+
+.txt-highlight {
+  color: #cda715;
+}
+
+.txt-secondary {
+  color: #31479e;
+}
+
+.txt-black {
+  color: #000;
+}
+
+ul {
+  list-style-type: none;
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+ul li {
+  background: url(../assets/span-star.svg) no-repeat center left;
+  padding-left: 4rem;
+  margin-top: 1rem;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+  background: #31479e;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: opacity 0.4s ease-out;
+  opacity: 0;
+}
+#back-to-top:hover {
+  background: #31479e;
+}
+#back-to-top.show {
+  opacity: 0.8;
+}
+/* #content {
+  height: 2000px;
+} */
+
+.main {
+  opacity: 0;
+  display: none;
+  transition: opacity 2s ease-in;
+  height: inherit;
+}
+
+/* Home section */
+
+.home {
+  height: 100vh;
+  width: 100vw;
+  background: url(../img/lublin.jpg) center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.bg-overlay {
+  position: absolute;
+  background: linear-gradient(
+    0deg,
+    #31479e 0%,
+    rgba(122, 122, 174, 0.67) 125.75%
+  );
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  height: 100vh;
+  width: 100vw;
+}
+
+/* linear-gradient(0deg, #31479E 0%, rgba(122, 122, 174, 0.67) 125.67%); */
+
+.home-info {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+}
+
+.home-logos {
+  max-width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 7rem;
+  justify-content: center;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+.e-logo {
+  height: 8rem;
+}
+
+.ic-logo {
+  height: 8rem;
+  margin-top: 0.8rem;
+  margin-left: 3.5rem;
+}
+
+.home-info > p {
+  margin-bottom: 1rem;
+}
+
+.buttons-home {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  margin-top: 3rem;
+  width: 60%;
+}
+
+.sign-up-btn,
+.more-btn {
+  display: block;
+  font-weight: bold;
+  width: 300px;
+  height: 80px;
+  padding: 25px;
+  font-size: 1.5rem;
+  margin: 0 2rem;
+  border-radius: 50px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sign-up-btn {
+  background: #efedff;
+  color: #31479e;
+}
+
+.more-btn {
+  border: 6px solid #efedff;
+  background: none;
+  padding-top: 18px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sign-up-btn:hover {
+  box-shadow: none;
+  background: #cda715;
+  cursor: pointer;
+}
+
+.more-btn:hover {
+  box-shadow: none;
+  color: #cda715;
+  border-color: #cda715;
+}
+
+/* Sign Up page */
+
+.sign-up {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(49, 71, 158, 0.9);
+  overflow: hidden;
+}
+
+.close {
+  position: absolute;
+  display: inline-block;
+  margin-top: 1rem;
+  right: 1rem;
+}
+.close:hover {
+  cursor: pointer;
+}
+
+.forms {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-gap: 1rem; */
+  text-align: center;
+  margin: 3rem auto 0;
+}
+
+.form-container {
+  background: rgba(122, 122, 174, 0.8);
+  height: 93vh;
+  width: 30vw;
+  margin: -1.5rem auto 0;
+}
+
+.form-container:nth-child(2) {
+  margin: -1.5rem auto 0;
+}
+
+.flag {
+  width: 4rem;
+  height: 4rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.form-control {
+  width: 20rem;
+  background: rgba(239, 237, 255, 0.5);
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  height: 2.5rem;
+  transition: all 0.3s ease-in;
+  padding-left: 1rem;
+}
+
+.form-control:first-child {
+  margin-top: 1rem;
+}
+
+.form-btn.sign-up-btn {
+  width: 10rem;
+  height: 3rem;
+  font-size: 1rem;
+  padding: 0;
+  display: inline-block;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.form-control::placeholder {
+  color: #dfd2d2;
+  font-family: "Roboto";
+}
+
+.form-control:focus {
+  -webkit-box-shadow: 0px 0px 9px 9px rgba(205, 167, 21, 1);
+  -moz-box-shadow: 0px 0px 9px 9px rgba(205, 167, 21, 1);
+  box-shadow: 0px 0px 9px 9px rgba(205, 167, 21, 1);
+}
+
+@-webkit-keyframes autofill {
+  to {
+    color: #fff;
+    font-family: "Roboto";
+    background: rgba(239, 237, 255, 0.5);
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
+.form-container p {
+  margin-bottom: 0.8rem;
+}
+
+p.bold {
+  font-weight: bold;
+}
+
+.glafka-logo {
+  width: 202px;
+  height: 75px;
+}
+
+.ef-logo {
+  width: 275px;
+  height: 75px;
+}
+
+.cofac-logo {
+  width: 348px;
+  height: 95px;
+  margin-top: -8px;
+}
+
+/* About section */
+#about {
+  text-align: center;
+  padding: 4rem 10rem;
+  width: 100vw;
+  background: #efedff;
+}
+
+#about h2 {
+  color: #31479e;
+}
+
+#about p {
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  margin-top: 1.5rem;
+}
+
+/* Features section */
+.features {
+  background: #7a7aae;
+  text-align: center;
+  padding: 4rem 10rem;
+}
+
+/* Programme section */
+.programme {
+  background: #efedff;
+  text-align: center;
+  padding: 4rem 10rem;
+}
+
+.programme-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: left;
+  grid-gap: 2rem;
+}
+
+.programme-items .item {
+  margin-bottom: 1rem;
+}
+.programme-items .item h3 {
+  font-size: 1.5rem;
+}
+
+/* Benefits section */
+
+.benefits {
+  background: linear-gradient(180deg, #efedff 0%, #31479e 90.49%);
+  text-align: center;
+  padding: 4rem 10rem;
+}
+
+.benefits-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 1.5rem;
+}
+
+.benefits .sign-up-btn {
+  display: inline-block;
+  margin-top: 3rem;
+}
+
+/* Experts section */
+.experts {
+  background: #efedff;
+  text-align: center;
+  padding: 4rem 10rem;
+}
+
+.experts-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+  text-align: left;
+  margin-top: 5rem;
+}
+
+.expert {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 1rem;
+}
+
+.expert img {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.description {
+  display: inline-block;
+}
+
+.description p.bold {
+  margin: -0.5rem 0 1rem;
+}
+
+/* Venue section */
+
+.venue {
+  background: linear-gradient(180deg, #efedff 0%, #31479e 90.49%);
+  text-align: center;
+  padding: 4rem 10rem;
+}
+
+.venue-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hotel {
+  width: 25rem;
+  height: 17rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hotel:first-child {
+  margin-right: 2rem;
+  position: relative;
+  z-index: 1;
+  padding: 5rem 0;
+}
+
+.hotel:first-child > p:last-child {
+  margin-top: 0.7rem;
+}
+
+.hotel-bg {
+  background: url(../img/hotel.jpg) center no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease-in;
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 67.9%;
+  position: relative;
+  height: 0;
+}
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* Footer */
+
+footer {
+  background: #cda715;
+  padding: 3rem 5rem;
+}
+.logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ef-footer {
+  width: 200px;
+}
+
+.glafka-footer {
+  width: 180px;
+}
+
+.cofac-footer {
+  width: 240px;
+}
+
+.soc-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3rem;
+}
+
+.fa-globe {
+  margin-left: 2rem;
+}
+
+.fas:hover,
+.fab:hover {
+  color: #fff;
+}
+
+.erasmus-note {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.funding-info {
+  margin-right: 3rem;
+}
+
+.erasmus-footer {
+  width: 400px;
+}
+
+.copyright {
+  background: #31479e;
+  text-align: center;
+  padding: 1rem 0;
+}
