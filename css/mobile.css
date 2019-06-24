@@ -1,0 +1,144 @@
+@media (max-width: 1000px) {
+  .experts-container {
+    grid-template-columns: 1fr;
+  }
+
+  .programme-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .venue-container > a,
+  .hotel:first-child {
+    display: none;
+  }
+  .hotel:last-child {
+    width: 100%;
+  }
+  #about,
+  .features,
+  .programme,
+  .experts,
+  .venue {
+    padding: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .erasmus-footer {
+    width: 300px;
+    margin-left: -1rem;
+  }
+  .funding-info {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 520px) {
+  h1 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .buttons-home {
+    flex-direction: column;
+  }
+
+  .sign-up-btn,
+  .more-btn {
+    display: block;
+    font-weight: bold;
+    width: 200px;
+    height: 60px;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+
+  .sign-up-btn {
+    padding-top: 1.25rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  ul {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  #about,
+  .features,
+  .programme,
+  .benefits,
+  .experts,
+  .venue {
+    padding: 2rem;
+  }
+
+  .programme-items {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .benefits-container {
+    flex-direction: column;
+    margin-left: -1rem;
+  }
+
+  .cloud {
+    height: 20vh;
+    width: 70vw;
+  }
+
+  .cloud:first-child,
+  .cloud:nth-child(3) {
+    margin-right: 5rem;
+  }
+
+  .cloud:nth-child(2),
+  .cloud:last-child {
+    margin-left: 5rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 2rem 1rem;
+  }
+  .footer-left {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .fa-facebook {
+    margin-right: 10rem;
+  }
+
+  .erasmus-footer {
+    margin: 0.5rem 0;
+  }
+
+  .footer-right {
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    width: 100%;
+  }
+}
