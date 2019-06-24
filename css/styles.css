@@ -9,8 +9,7 @@
 body {
   font-family: "Roboto", sans-serif;
   position: relative;
-  background: #31479e;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 h1 {
@@ -51,7 +50,7 @@ ul {
 }
 
 ul li {
-  background: url(../assets/span-star.svg) no-repeat center left;
+  background: url(../dist/assets/span-star.svg) no-repeat center left;
   padding-left: 4rem;
   margin-top: 1rem;
 }
@@ -85,19 +84,19 @@ ul li {
   border-radius: 10px;
 }
 
-/* Home section */
-
 .main {
   opacity: 0;
   display: none;
-  transition: opacity 1s ease-in;
-  overflow-x: hidden;
+  transition: opacity 2s ease-in;
+  height: inherit;
 }
+
+/* Home section */
 
 .home {
   height: 100vh;
   width: 100vw;
-  background: url(../img/lublin.jpg) center no-repeat;
+  background: url(../dist/img/lublin.jpg) center no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -114,8 +113,6 @@ ul li {
   width: 100vw;
 }
 
-/* linear-gradient(0deg, #31479E 0%, rgba(122, 122, 174, 0.67) 125.67%); */
-
 .home-info {
   height: 100vh;
   width: 100%;
@@ -124,23 +121,29 @@ ul li {
 }
 
 .home-logos {
-  max-width: 60%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 7rem;
+  display: flex;
   justify-content: center;
-  margin: auto;
-  padding: 1rem 0;
+  align-items: center;
+  margin: 0 3rem;
 }
 
 .e-logo {
-  height: 8rem;
+  height: 10rem;
+  width: 28rem;
+  background: url(../dist/img/Erasmus[White].png) no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .ic-logo {
   height: 8rem;
-  margin-top: 0.8rem;
-  margin-left: 3.5rem;
+  width: 18rem;
+  background: url(../dist/img/ic-english-sm.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 5rem 0 0;
+  margin-left: 3rem;
+  margin-top: 1rem;
 }
 
 .home-info > p {
@@ -149,11 +152,9 @@ ul li {
 
 .buttons-home {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin: auto;
-  margin-top: 3rem;
-  width: 60%;
+  margin: 2rem 2rem 0;
 }
 
 .sign-up-btn,
@@ -175,9 +176,9 @@ ul li {
 }
 
 .more-btn {
-  border: 6px solid #efedff;
+  border: 4px solid #efedff;
   background: none;
-  padding-top: 18px;
+  padding-top: 20px;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -365,13 +366,48 @@ p.bold {
 .benefits {
   background: linear-gradient(180deg, #efedff 0%, #31479e 90.49%);
   text-align: center;
-  padding: 4rem 10rem;
+  padding: 4rem 2rem;
 }
 
 .benefits-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: center;
+  /* align-content: space-around; */
+  align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 1.5rem;
+}
+
+.benefits > h3 {
+  text-align: left;
+  display: block;
+  margin-left: 4rem;
+}
+
+.cloud {
+  width: 33vw;
+  height: 30vh;
+  margin: 0 1rem 1rem;
+}
+
+.cloud:first-child {
+  background: url(../dist/img/cloud-two.png) center no-repeat;
+  background-size: contain;
+}
+
+.cloud:nth-child(2) {
+  background: url(../dist/img/cloud-one.png) center no-repeat;
+  background-size: contain;
+}
+
+.cloud:nth-child(3) {
+  background: url(../dist/img/cloud-three.png) center no-repeat;
+  background-size: contain;
+}
+
+.cloud:last-child {
+  background: url(../dist/img/cloud-four.png) center no-repeat;
+  background-size: contain;
 }
 
 .benefits .sign-up-btn {
@@ -421,7 +457,7 @@ p.bold {
 .venue {
   background: linear-gradient(180deg, #efedff 0%, #31479e 90.49%);
   text-align: center;
-  padding: 4rem 10rem;
+  padding: 4rem 2rem;
 }
 
 .venue-container {
@@ -431,7 +467,7 @@ p.bold {
 
 .hotel {
   width: 25rem;
-  height: 17rem;
+  height: 100%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -447,7 +483,7 @@ p.bold {
 }
 
 .hotel-bg {
-  background: url(../img/hotel.jpg) center no-repeat;
+  background: url(../dist/img/hotel.jpg) center no-repeat;
   background-size: cover;
   opacity: 0.3;
   position: absolute;
@@ -456,6 +492,7 @@ p.bold {
   bottom: 0;
   left: 0;
   z-index: -1;
+  transition: opacity 0.3s ease-in;
 }
 
 .map-responsive {
@@ -476,12 +513,42 @@ p.bold {
 
 footer {
   background: #cda715;
-  padding: 3rem 5rem;
-}
-.logos {
+  padding: 2rem 5rem 1rem;
   display: flex;
-  justify-content: space-between;
+  margin: auto;
+}
+
+.footer-left {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.soc-logos {
+  display: flex;
+  justify-content: left;
   align-items: center;
+  margin-bottom: 1rem;
+}
+
+.fa-facebook {
+  margin-right: 2rem;
+}
+
+.erasmus-footer {
+  width: 400px;
+  margin-left: -1.2rem;
+}
+
+.footer-right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-logo {
+  margin-top: 1rem;
 }
 
 .ef-footer {
@@ -494,37 +561,12 @@ footer {
 
 .cofac-footer {
   width: 240px;
-}
-
-.soc-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 3rem;
-}
-
-.fa-globe {
-  margin-left: 2rem;
+  margin-right: -0.5rem;
 }
 
 .fas:hover,
 .fab:hover {
   color: #fff;
-}
-
-.erasmus-note {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.funding-info {
-  margin-right: 3rem;
-}
-
-.erasmus-footer {
-  width: 400px;
 }
 
 .copyright {
