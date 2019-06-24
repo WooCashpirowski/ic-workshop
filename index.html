@@ -8,7 +8,9 @@
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="dist/css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/mobile.css">
+    
     <title>IC-English Workshop</title>
     <script src="https://kit.fontawesome.com/74a73e1e16.js"></script>
   </head>
@@ -19,16 +21,8 @@
         <div class="bg-overlay"></div>
         <div class="home-info">
           <div class="home-logos">
-            <img
-              class="e-logo"
-              src="dist/img/Erasmus[White].png"
-              alt="erasmus"
-            />
-            <img
-              class="ic-logo"
-              src="dist/img/ic-english-sm.png"
-              alt="ic-english"
-            />
+            <div class="e-logo"></div>
+            <div class="ic-logo"></div>
           </div>
           <h1>
             International School <br />
@@ -170,25 +164,17 @@
           How will you <span class="txt-highlight">benefit?</span>
         </h2>
         <div class="benefits-container">
-          <div class="cloud">
-            <img src="dist/img/cloud-two.png" alt="c-1" />
-          </div>
-          <div class="cloud">
-            <img src="dist/img/cloud-one.png" alt="c-2" />
-          </div>
-          <div class="cloud">
-            <img src="dist/img/cloud-three.png" alt="c-3" />
-          </div>
-          <div class="cloud">
-            <img src="dist/img/cloud-four.png" alt="c-4" />
-          </div>
+          <div class="cloud"></div>
+          <div class="cloud"></div>
+          <div class="cloud"></div>
+          <div class="cloud"></div>
         </div>
-        <h3 class="bold">Also:</h3>
+        <h3>Plus:</h3>
         <ul>
           <li>The workshop is 100% free</li>
           <li>We provide you with coffee service and lunch</li>
           <li>
-            We cover costs of travel, insurance and accommodation (applies to
+            We cover travel, insurance and accommodation costs (applies to
             participants from Czech Republic and Portugal)
           </li>
         </ul>
@@ -346,28 +332,7 @@
       </section>
 
       <footer>
-        <div class="logos">
-          <a href="https://netedukacja.pl/en/project/" target="_blank">
-            <img
-              class="footer-logo ef-footer"
-              src="https://ic-english.eu/wp-content/uploads/2019/01/logo3.png"
-              alt="ef-logo"
-            />
-          </a>
-          <a href="http://www.glafka.cz/" target="_blank">
-            <img
-              class="footer-logo glafka-footer"
-              src="https://ic-english.eu/wp-content/uploads/2019/01/logo1.png"
-              alt="glafka-logo"
-            />
-          </a>
-          <a href="https://www.ulusofona.pt/en/" target="_blank">
-            <img
-              class="footer-logo cofac-footer"
-              src="https://ic-english.eu/wp-content/uploads/2019/01/logo2.png"
-              alt="cofac-logo"
-            />
-          </a>
+        <div class="footer-left">
           <div class="soc-logos">
             <a
               href="https://www.facebook.com/IC-English-innovative-platform-579124535880757/"
@@ -378,22 +343,53 @@
               <i class="fas fa-globe fa-3x"></i>
             </a>
           </div>
-        </div>
-        <div class="erasmus-note">
-          <p class="funding-info">
-            This project has been funded with support from the European
-            Commission. This publication reflects the views only of the author,
-            and the Commission cannot be held responsible for any use which may
-            be made of the information contained therein. Grant Agreement
-            number: 2018-1-PL01-KA204-050784
-          </p>
-          <a
+          
+          <div class="e-footer">
+            <a
             href="https://ec.europa.eu/programmes/erasmus-plus/"
             target="_blank"
           >
             <img class="erasmus-footer" src="dist/img/Erasmus[White].png" alt=""
           /></a>
+          </div>
+          <div class="funding-info">
+              <p>
+                This project has been funded with support from the European
+                Commission. This publication reflects the views only of the author,
+                and the Commission cannot be held responsible for any use which may
+                be made of the information contained therein. Grant Agreement
+                number: 2018-1-PL01-KA204-050784
+              </p>
+            </div>
         </div>
+        <div class="footer-right">
+          <h4>Project Partners:</h4>
+          <a href="http://www.glafka.cz/" target="_blank">
+            <img
+              class="footer-logo glafka-footer"
+              src="https://ic-english.eu/wp-content/uploads/2019/01/logo1.png"
+              alt="glafka-logo"
+            />
+          </a>
+          <a href="https://netedukacja.pl/en/project/" target="_blank">
+            <img
+              class="footer-logo ef-footer"
+              src="https://ic-english.eu/wp-content/uploads/2019/01/logo3.png"
+              alt="ef-logo"
+            />
+          </a>
+          
+          <a href="https://www.ulusofona.pt/en/" target="_blank">
+            <img
+              class="footer-logo cofac-footer"
+              src="https://ic-english.eu/wp-content/uploads/2019/01/logo2.png"
+              alt="cofac-logo"
+            />
+          </a>
+        </div>
+        
+        
+        
       </footer>
       <div class="copyright">
         <p>
@@ -407,5 +403,6 @@
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="dist/main.js"></script>
+ 
   </body>
 </html>
