@@ -55,6 +55,10 @@ ul li {
   margin-top: 1rem;
 }
 
+p.bold {
+  font-weight: bold;
+}
+
 #back-to-top {
   position: fixed;
   bottom: 40px;
@@ -87,7 +91,7 @@ ul li {
 .main {
   opacity: 0;
   display: none;
-  transition: opacity 2s ease-in;
+  transition: opacity 0.8s ease-in;
   height: inherit;
 }
 
@@ -192,127 +196,6 @@ ul li {
   box-shadow: none;
   color: #cda715;
   border-color: #cda715;
-}
-
-/* Sign Up page */
-
-.sign-up {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(49, 71, 158, 0.9);
-  overflow: hidden;
-}
-
-.close {
-  position: absolute;
-  display: inline-block;
-  margin-top: 1rem;
-  right: 1rem;
-}
-.close:hover {
-  cursor: pointer;
-}
-
-.forms {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  /* grid-gap: 1rem; */
-  text-align: center;
-  margin: 3rem auto 0;
-}
-
-.form-container {
-  background: rgba(122, 122, 174, 0.8);
-  height: 93vh;
-  width: 30vw;
-  margin: -1.5rem auto 0;
-}
-
-.form-container:nth-child(2) {
-  margin: -1.5rem auto 0;
-}
-
-.flag {
-  width: 4rem;
-  height: 4rem;
-  margin: 1.5rem 0 0.5rem;
-}
-
-.form-control {
-  width: 20rem;
-  background: rgba(239, 237, 255, 0.5);
-  border: none;
-  outline: none;
-  color: #fff;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  height: 2.5rem;
-  transition: all 0.3s ease-in;
-  padding-left: 1rem;
-}
-
-.form-control:first-child {
-  margin-top: 1rem;
-}
-
-.form-btn.sign-up-btn {
-  width: 10rem;
-  height: 3rem;
-  font-size: 1rem;
-  padding: 0;
-  display: inline-block;
-  border: none;
-  margin-bottom: 1rem;
-}
-
-.form-control::placeholder {
-  color: #dfd2d2;
-  font-family: "Roboto";
-}
-
-.form-control:focus {
-  -webkit-box-shadow: 0px 0px 9px 9px rgba(205, 167, 21, 1);
-  -moz-box-shadow: 0px 0px 9px 9px rgba(205, 167, 21, 1);
-  box-shadow: 0px 0px 9px 9px rgba(205, 167, 21, 1);
-}
-
-@-webkit-keyframes autofill {
-  to {
-    color: #fff;
-    font-family: "Roboto";
-    background: rgba(239, 237, 255, 0.5);
-  }
-}
-
-input:-webkit-autofill {
-  -webkit-animation-name: autofill;
-  -webkit-animation-fill-mode: both;
-}
-
-.form-container p {
-  margin-bottom: 0.8rem;
-}
-
-p.bold {
-  font-weight: bold;
-}
-
-.glafka-logo {
-  width: 202px;
-  height: 75px;
-}
-
-.ef-logo {
-  width: 275px;
-  height: 75px;
-}
-
-.cofac-logo {
-  width: 348px;
-  height: 95px;
-  margin-top: -8px;
 }
 
 /* About section */
@@ -509,6 +392,48 @@ p.bold {
   position: absolute;
 }
 
+/* Sign Up page */
+
+#sign-up {
+  background: #efedff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.sign-ups {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  margin: 3rem auto 0;
+}
+
+.sign-up-field {
+  background: rgba(122, 122, 174, 0.8);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.flag {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.sign-up-sm {
+  margin: 1rem auto;
+  width: 10rem;
+  height: 3rem;
+  font-size: 1rem;
+  padding: 0.8rem 0 0;
+  display: inline-block;
+  border: none;
+}
+
+.sign-ups p {
+  margin-top: 0.8rem;
+}
+
 /* Footer */
 
 footer {
@@ -573,4 +498,81 @@ footer {
   background: #31479e;
   text-align: center;
   padding: 1rem 0;
+}
+
+/* Sign-up page */
+
+.sign-up-container {
+  position: relative;
+  height: 100vh;
+}
+
+.close {
+  position: absolute;
+  display: inline-block;
+  margin-top: 1rem;
+  right: 1rem;
+}
+.close:hover {
+  cursor: pointer;
+}
+
+.sign-up-form {
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 375px;
+  background: #7a7aae;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sign-up-form .sign-up-sm {
+  padding-top: 0;
+}
+
+.form-control {
+  width: 20rem;
+  background: rgba(239, 237, 255, 0.5);
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  height: 2.5rem;
+  transition: all 0.3s ease-in;
+  padding-left: 1rem;
+}
+
+.form-control:first-child {
+  margin-top: 1rem;
+}
+
+.form-control::placeholder {
+  color: #dfd2d2;
+  font-family: "Roboto";
+}
+
+.form-control:focus {
+  -webkit-box-shadow: 0px 0px 9px 9px rgba(205, 167, 21, 1);
+  -moz-box-shadow: 0px 0px 9px 9px rgba(205, 167, 21, 1);
+  box-shadow: 0px 0px 9px 9px rgba(205, 167, 21, 1);
+}
+
+@-webkit-keyframes autofill {
+  to {
+    color: #fff;
+    font-family: "Roboto";
+    background: rgba(239, 237, 255, 0.5);
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
 }
