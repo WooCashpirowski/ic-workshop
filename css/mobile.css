@@ -42,6 +42,11 @@
   .funding-info {
     font-size: 14px;
   }
+
+  .sign-ups {
+    grid-template-columns: 1fr;
+    margin: 3rem 5rem 0;
+  }
 }
 
 @media (max-width: 520px) {
@@ -116,6 +121,18 @@
     margin-left: 5rem;
   }
 
+  .sign-ups {
+    margin: 3rem 2rem 0;
+  }
+
+  .sign-up-field p {
+    display: none;
+  }
+
+  .sign-up-field .sign-up-sm {
+    margin: 1rem auto 0;
+  }
+
   footer {
     flex-direction: column;
     align-items: center;
@@ -140,5 +157,9 @@
     text-align: center;
     margin-top: 2rem;
     width: 100%;
+  }
+
+  .sign-up-form .sign-up-sm {
+    padding: 0;
   }
 }
