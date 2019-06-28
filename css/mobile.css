@@ -47,6 +47,10 @@
     grid-template-columns: 1fr;
     margin: 3rem 5rem 0;
   }
+
+  .sign-up-field:last-child {
+    display: none;
+  }
 }
 
 @media (max-width: 520px) {
