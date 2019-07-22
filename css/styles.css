@@ -43,7 +43,7 @@ h3 {
 }
 
 ul {
-  list-style-type: none;
+  list-style: none;
   text-align: left;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -242,6 +242,12 @@ p.bold {
 }
 .programme-items .item h3 {
   font-size: 1.5rem;
+  text-align: center;
+}
+
+.item li {
+  display: inline-block;
+  margin-top: 1rem;
 }
 
 /* Benefits section */
@@ -564,7 +570,7 @@ footer {
   box-shadow: 0px 0px 9px 9px rgba(205, 167, 21, 1);
 }
 
-@-webkit-keyframes autofill {
+@keyframes autofill {
   to {
     color: #fff;
     font-family: "Roboto";
@@ -572,7 +578,7 @@ footer {
   }
 }
 
-input:-webkit-autofill {
-  -webkit-animation-name: autofill;
-  -webkit-animation-fill-mode: both;
+input:autofill {
+  animation-name: autofill;
+  animation-fill-mode: both;
 }
